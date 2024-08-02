@@ -1,0 +1,10 @@
+.image-house{
+    height: 30px;
+    width: 30px;
+}
+
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

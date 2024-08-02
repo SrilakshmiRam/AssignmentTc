@@ -1,0 +1,38 @@
+.app-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding-bottom: 40px;
+  }
+  
+  .products-listings{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .app-title{
+    font-family: "Roboto";
+    font-size: 30px;
+    font-weight: 800;
+    color: #000000;
+  }
+  
+  
+  .dropdown-container{
+    display: flex;
+    align-self: flex-end;
+    margin-right: 80px;
+  }
+  
+  .dropdown{
+    height: 25px;
+    width: 200px;
+    border-color: #d1dbdb;
+    padding: 4px;
+  }

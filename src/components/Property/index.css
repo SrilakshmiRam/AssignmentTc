@@ -1,0 +1,63 @@
+.property-item{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 250px;
+    height: 450px;
+    margin: 10px;
+    box-shadow: 1px 1px 1px 1px #d1dbdb;
+}
+
+.image{
+    height: 200px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    border: 1px red solid;
+}
+
+.heading-property{
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.price{
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 800;
+    color: #022045;
+}
+
+.description{
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 800;
+    color: #022045;
+    max-width: 240px;
+}
+
+.booknow-btn{
+    height: 36px;
+    border-width: 0px;
+    background-color: blue;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 25px;
+}
+
+
+.popup-container{
+    background-color: #ffffff;
+    height: 400px;
+    border: 1px blue solid;
+    padding: 10px;
+}

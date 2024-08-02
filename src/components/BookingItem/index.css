@@ -1,0 +1,46 @@
+.booking-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.image-product{
+  width: 100%;
+}
+
+.location{
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 800;
+    color: #080900;
+}
+
+.description-item{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #080900;
+}
+
+.price-item{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #080900;
+}
+
+
+.add-to-cart{
+    height: 45px;
+    border-width: 0px;
+    width: 120px;
+    background-color: blue;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
