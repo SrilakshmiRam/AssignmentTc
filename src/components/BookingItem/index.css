@@ -44,3 +44,38 @@
     border-radius: 25px;
     margin-bottom: 30px;
 }
+
+
+@media screen and (max-width:576px){
+    .location{
+        font-size: 18px;
+    }
+    .description-item{
+        font-size: 18px;
+    }
+
+    .add-to-cart{
+        width: 160px;
+    }
+
+    .heading{
+        font-size: 25px;
+    }
+}
+
+@media screen and ((min-width:577px) and (max-width:767px)){
+    .location{
+        font-size: 20px;
+    }
+    .description-item{
+        font-size: 22px;
+    }
+
+    .add-to-cart{
+        width: 200px;
+    }
+
+    .heading{
+        font-size: 25px;
+    }
+}

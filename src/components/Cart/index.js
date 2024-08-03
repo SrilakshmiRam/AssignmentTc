@@ -1,26 +1,55 @@
-// Cart.js
-import React, { useContext } from 'react';
-import CartContext from '../../ContextCart/cart';
-import CartItem from '../CartItem';
+import CartListView from '../CartListView'
 
-const Cart = () => {
-  const { cartList } = useContext(CartContext);
+import CartContext from '../../ContextCart/cart'
 
-  console.log('cartList in Cart:', cartList); // Debugging
-
-  return (
-    <ul>
-      {cartList.length > 0 ? (
-        cartList.map((item, index) => (
-          <CartItem key={index} item={item} />
-        ))
-      ) : (
-        <li>No items in cart</li>
-      )}
-    </ul>
-  );
-};
-
-export default Cart;
+import EmptyCartView from '../EmptyCartView'
 
 
+import CartSummary from '../CartSummary'
+
+import './index.css'
+
+const Cart=()=>{
+  return <CartContext.Consumer>
+    {value=>{
+      const {cartList, removeAllCartItems, isClickRemoveAll} = value 
+      console.log(cartList.length)
+      const showEmptyView = cartList.length === 0
+      const onCickRemoveAllItems = () => {
+        removeAllCartItems()
+      }
+
+      return (
+        <>
+          {isClickRemoveAll ? (
+            <EmptyCartView />
+          ) : (
+            <div className="cart-container">
+              {showEmptyView ? (
+                <EmptyCartView />
+              ) : (
+                <div className="cart-content-container">
+                  <h1 className="cart-heading">My Cart</h1>
+                  <button
+                    type="button"
+                    className="remove-all"
+                    onClick={onCickRemoveAllItems}
+                    data-testid="remove"
+                  >
+                    Remove All
+                  </button>
+                  <CartListView />
+                  <div className="summary">
+                    <CartSummary />
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </>
+      )
+    }}
+  </CartContext.Consumer>
+}
+
+export default Cart

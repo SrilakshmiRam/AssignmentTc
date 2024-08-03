@@ -3,7 +3,9 @@ import React from 'react'
 
 const CartContext=React.createContext({
    cartList:[],
-   updateCartList:()=>{}
+   updateCartList:()=>{},
+   removeCartItem: () => {},
+   removeAllCartItems: () => {},
 })
 
 export default CartContext;

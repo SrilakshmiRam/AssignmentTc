@@ -1,5 +1,5 @@
 // BookingItem.js
-import React, { useContext,useState } from 'react';
+import React, { useContext} from 'react';
 import { useParams } from 'react-router-dom';
 import CartContext from '../../ContextCart/cart';
 import { v4 as uuidv4 } from 'uuid';
@@ -101,7 +101,7 @@ const propertyListings=[
 
 const BookingItem = () => {
   const { id } = useParams();
-  const { updateCartList } = useContext(CartContext);
+  const { updateCartList ,cartList} = useContext(CartContext);
 
   const propertyArray = propertyListings.filter(each => each.id === parseInt(id, 10));
   const [propertyObj] = propertyArray;
@@ -115,11 +115,13 @@ const BookingItem = () => {
     title,
     imageUrl,
     price,
+    location
   };
 
   const onClickAddCart = () => {
     console.log('Adding to cart:', newCartItem); // Debugging
     updateCartList(newCartItem);
+    console.log(cartList)
   };
 
   return (

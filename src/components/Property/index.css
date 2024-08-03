@@ -61,3 +61,10 @@
     border: 1px blue solid;
     padding: 10px;
 }
+
+
+@media screen and (max-width:576px){
+    .property-item{
+        margin: 5px;
+    }
+}

@@ -2,6 +2,7 @@ import {Component} from 'react'
 
 import Property from '../Property';
 
+
 import './index.css';
 
 const propertyListings=[
@@ -128,7 +129,6 @@ class Home extends Component{
 
   render(){
     const {resultArray}=this.state
-    
     return(
       <div className="app-container">
         <h1 className="app-title">Visit and Book The Properties Now</h1>

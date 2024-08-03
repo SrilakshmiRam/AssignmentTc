@@ -1,4 +1,6 @@
 import {useNavigate} from 'react-router-dom'
+import { useContext } from 'react'
+import CartContext from '../../ContextCart/cart'
 
 import './index.css'
 
@@ -9,6 +11,9 @@ const Property=props=>{
     const onClickBook=()=>{
       navigate(`/house/${id}`)
     }
+
+    const {cartList}=useContext(CartContext)
+    console.log(cartList)
 
     return(
         <li className="property-item">
